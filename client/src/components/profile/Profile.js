@@ -9,12 +9,7 @@ import ProfileExperience from "./ProfileExperience";
 import ProfileEducation from "./ProfileEducation";
 import ProfileGithub from "./ProfileGithub";
 import { getProfileById } from "../../actions/profile";
-const Profile = ({
-  match,
-  getProfileById,
-  profile: { profile, loading },
-  auth,
-}) => {
+const Profile = ({ match, getProfileById, profile: { profile }, auth }) => {
   useEffect(() => {
     getProfileById(match.params.id);
   }, [getProfileById, match.params.id]);
