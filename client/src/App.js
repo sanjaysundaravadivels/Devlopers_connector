@@ -14,6 +14,7 @@ import Profile from "./components/profile/Profile";
 import Profiles from "./components/profiles/Profiles";
 import Posts from "./components/posts/Posts";
 import Post from "./components/post/Post";
+import NotFound from "./components/layout/NotFound";
 import Dashboard from "./components/dashboard/Dashboard";
 //Redux
 import { Provider } from "react-redux";
@@ -66,6 +67,7 @@ const App = () => {
               />
               <PrivateRoute exact path="/posts" component={Posts} />
               <PrivateRoute exact path="/posts/:id" component={Post} />
+              <Route component={NotFound} />
             </Switch>
           </section>
         </Fragment>
